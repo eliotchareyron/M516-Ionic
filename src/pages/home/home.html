@@ -1,13 +1,13 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Home Page</ion-title>
   </ion-navbar>
 </ion-header>
-
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-<ion-list>
- <div> test </div> 
-</ion-list>
-
+ 
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let post of posts">
+      <img [src]="post.data.url" />
+    </ion-item>
+  </ion-list>
 </ion-content>
