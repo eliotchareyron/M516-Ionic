@@ -7,7 +7,9 @@
 <ion-content>
   <ion-list>
     <ion-item *ngFor="let post of posts">
-      <div> {{post.id}} </div>
+       <div> id : {{post.id}} </div>
+       <div>  créer le : {{post.created_at}} </div>
+      <img [src]="post.user.picture_url" />
     </ion-item>
   </ion-list>
 </ion-content>
