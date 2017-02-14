@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Welcome to Ionic!</h2>
+<ion-list>
+  <button ion-item   *ngFor="let hero of heroes">
+  <div> {{hero.id}} </div>
+
+  <div> {{hero.name}} </div>
+  </button>  
+</ion-list>
+<ion-checkbox></ion-checkbox>
+<ion-input type="text" >
+  <form>
+    <textarea id="connection">
+    </textarea>
+  </form>
+</ion-input>
+</ion-content>
