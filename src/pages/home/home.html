@@ -8,7 +8,9 @@
   <ion-list>
     <ion-item *ngFor="let post of posts">
        <div> id : {{post.id}} </div>
-       <div>  créer le : {{post.created_at}} </div>
+       <div>  crée le : {{post.created_at}} </div>
+        <div>  latitude  : {{post.lat}} </div>
+         <div>  longitude : {{post.lng}} </div>
       <img [src]="post.user.picture_url" />
     </ion-item>
   </ion-list>
