@@ -8,15 +8,15 @@
 
 <ion-content ng-controller="ExampleController">
 
-  <form name="Connexion" (ngSubmit)="logForm()">
+  
       <ion-item>
         <ion-label>E-mail</ion-label>
-        <ion-input type="text" required name="E-mail"></ion-input>
+        <ion-input type="text" [(ngModel)]="emailInput" name="E-mail"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Password</ion-label>
-        <ion-input type="password" required name="Password"></ion-input>
+        <ion-input type="password" [(ngModel)]="passwordInput" name="Password"></ion-input>
       </ion-item>
-      <button ion-button type="submit" block> Connexion</button>
-    </form>
+      <button ion-button (tap)="login()" block> Connexion</button>
+   
 </ion-content>
