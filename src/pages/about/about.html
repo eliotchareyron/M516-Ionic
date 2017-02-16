@@ -6,6 +6,17 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content ng-controller="ExampleController">
 
+  <form name="Connexion" (ngSubmit)="logForm()">
+      <ion-item>
+        <ion-label>E-mail</ion-label>
+        <ion-input type="text" required name="E-mail"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Password</ion-label>
+        <ion-input type="password" required name="Password"></ion-input>
+      </ion-item>
+      <button ion-button type="submit" block> Connexion</button>
+    </form>
 </ion-content>
