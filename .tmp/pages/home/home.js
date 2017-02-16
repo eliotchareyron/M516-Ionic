@@ -1,28 +1,14 @@
 import { Component } from '@angular/core';
-export var Hero = (function () {
-    function Hero() {
-    }
-    return Hero;
-}());
-var HEROES = [
-    { id: 11, name: 'Mr. Nice' },
-    { id: 12, name: 'Narco' },
-    { id: 13, name: 'Bombasto' },
-    { id: 14, name: 'Celeritas' },
-    { id: 15, name: 'Magneta' },
-    { id: 16, name: 'RubberMan' },
-    { id: 17, name: 'Dynama' },
-    { id: 18, name: 'Dr IQ' },
-    { id: 19, name: 'Magma' },
-    { id: 20, name: 'Tornado' }
-];
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
 export var HomePage = (function () {
-    function HomePage() {
-        this.heroes = HEROES;
+    function HomePage(http) {
+        var _this = this;
+        this.http = http;
+        this.http.get('http://checkin-api.dev.cap-liberte.com/checkin').map(function (res) { return res.json(); }).subscribe(function (id) {
+            _this.posts = id;
+        });
     }
-    HomePage.prototype.onSelect = function (hero) {
-        this.selectedHero = hero;
-    };
     HomePage.decorators = [
         { type: Component, args: [{
                     selector: 'page-home',
@@ -30,7 +16,9 @@ export var HomePage = (function () {
                 },] },
     ];
     /** @nocollapse */
-    HomePage.ctorParameters = [];
+    HomePage.ctorParameters = [
+        { type: Http, },
+    ];
     return HomePage;
 }());
 //# sourceMappingURL=home.js.map
