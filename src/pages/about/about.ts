@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
 import { NavController } from 'ionic-angular';
 
 @Component({
@@ -9,6 +10,7 @@ import { NavController } from 'ionic-angular';
 export class AboutPage {
  emailInput : string;
 passwordInput : string;
+ posts: any;
   constructor(public navCtrl: NavController) {
 
   }
@@ -19,6 +21,8 @@ var passwordInput : string;
 
   emailInput = this.emailInput;
   passwordInput = this.passwordInput;
+
+const url = ' http://checkin-api.dev.cap-liberte.com/auth'
 
   
 }
