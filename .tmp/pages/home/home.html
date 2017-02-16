@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home Page</ion-title>
+    <ion-title>Last Cheking Page</ion-title>
   </ion-navbar>
 </ion-header>
  
@@ -8,15 +8,11 @@
   <ion-list>
     <ion-item *ngFor="let post of posts">
        <div> id : {{post.id}} </div>
-       <div>  crée le : {{post.created_at}} </div>
-        <div>  latitude  : {{post.lat}} </div>
-         <div>  longitude : {{post.lng}} </div>
-         <script >
-         if (post.image_path == null) {
-console.log('pomme')
-         }
-         </script>
-      <img [src]="post.image_path" />
+      <div>  crée le : {{post.created_at}} </div>
+      <div>  latitude  : {{post.lat}} </div>
+      <div>  longitude : {{post.lng}} </div>
+      <img [src]="post.image_path || post.user.picture_url" />
+     
     </ion-item>
   </ion-list>
 </ion-content>

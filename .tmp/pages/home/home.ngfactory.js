@@ -118,7 +118,7 @@ var _View_HomePage0 = (function (_super) {
         var compView_4 = import13.viewFactory_ToolbarTitle0(this.viewUtils, this.injector(4), this._appEl_4);
         this._ToolbarTitle_4_4 = new import13.Wrapper_ToolbarTitle(this.parentInjector.get(import17.Config), new import18.ElementRef(this._el_4), this.renderer, this.parentInjector.get(import22.Toolbar, null), this._Navbar_2_4.context);
         this._appEl_4.initComponent(this._ToolbarTitle_4_4.context, [], compView_4);
-        this._text_5 = this.renderer.createText(null, 'Home Page', null);
+        this._text_5 = this.renderer.createText(null, 'Last Cheking Page', null);
         compView_4.create(this._ToolbarTitle_4_4.context, [[].concat([this._text_5])], null);
         this._text_6 = this.renderer.createText(null, '\n  ', null);
         compView_2.create(this._Navbar_2_4.context, [
@@ -270,19 +270,18 @@ var _View_HomePage1 = (function (_super) {
         this._text_1 = this.renderer.createText(null, '\n       ', null);
         this._el_2 = this.renderer.createElement(null, 'div', null);
         this._text_3 = this.renderer.createText(this._el_2, '', null);
-        this._text_4 = this.renderer.createText(null, '\n       ', null);
+        this._text_4 = this.renderer.createText(null, '\n      ', null);
         this._el_5 = this.renderer.createElement(null, 'div', null);
         this._text_6 = this.renderer.createText(this._el_5, '', null);
-        this._text_7 = this.renderer.createText(null, '\n        ', null);
+        this._text_7 = this.renderer.createText(null, '\n      ', null);
         this._el_8 = this.renderer.createElement(null, 'div', null);
         this._text_9 = this.renderer.createText(this._el_8, '', null);
-        this._text_10 = this.renderer.createText(null, '\n         ', null);
+        this._text_10 = this.renderer.createText(null, '\n      ', null);
         this._el_11 = this.renderer.createElement(null, 'div', null);
         this._text_12 = this.renderer.createText(this._el_11, '', null);
-        this._text_13 = this.renderer.createText(null, '\n         ', null);
-        this._text_14 = this.renderer.createText(null, '\n      ', null);
-        this._el_15 = this.renderer.createElement(null, 'img', null);
-        this._text_16 = this.renderer.createText(null, '\n    ', null);
+        this._text_13 = this.renderer.createText(null, '\n      ', null);
+        this._el_14 = this.renderer.createElement(null, 'img', null);
+        this._text_15 = this.renderer.createText(null, '\n     \n    ', null);
         this._query_Label_0_0.reset([]);
         this._Item_0_4.context.contentLabel = this._query_Label_0_0.first;
         compView_0.create(this._Item_0_4.context, [
@@ -298,9 +297,8 @@ var _View_HomePage1 = (function (_super) {
                 this._text_10,
                 this._el_11,
                 this._text_13,
-                this._text_14,
-                this._el_15,
-                this._text_16
+                this._el_14,
+                this._text_15
             ]),
             [],
             []
@@ -325,17 +323,16 @@ var _View_HomePage1 = (function (_super) {
             this._el_11,
             this._text_12,
             this._text_13,
-            this._text_14,
-            this._el_15,
-            this._text_16
+            this._el_14,
+            this._text_15
         ], [], []);
         return null;
     };
     _View_HomePage1.prototype.injectorGetInternal = function (token, requestNodeIndex, notFoundResult) {
-        if (((token === import38.Item) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 16)))) {
+        if (((token === import38.Item) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 15)))) {
             return this._Item_0_4.context;
         }
-        if (((token === import38.ItemContent) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 16)))) {
+        if (((token === import38.ItemContent) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 15)))) {
             return this._ItemContent_0_5.context;
         }
         return notFoundResult;
@@ -381,9 +378,9 @@ var _View_HomePage1 = (function (_super) {
             this.renderer.setText(this._text_12, currVal_3);
             this._expr_3 = currVal_3;
         }
-        var currVal_4 = this.context.$implicit.image_path;
+        var currVal_4 = (this.context.$implicit.image_path || this.context.$implicit.user.picture_url);
         if (import4.checkBinding(throwOnChange, this._expr_4, currVal_4)) {
-            this.renderer.setElementProperty(this._el_15, 'src', this.viewUtils.sanitizer.sanitize(import39.SecurityContext.URL, currVal_4));
+            this.renderer.setElementProperty(this._el_14, 'src', this.viewUtils.sanitizer.sanitize(import39.SecurityContext.URL, currVal_4));
             this._expr_4 = currVal_4;
         }
         this.detectViewChildrenChanges(throwOnChange);

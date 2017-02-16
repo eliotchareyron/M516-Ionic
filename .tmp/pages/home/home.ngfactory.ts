@@ -143,7 +143,7 @@ class _View_HomePage0 extends import1.AppView<import0.HomePage> {
     var compView_4:any = import13.viewFactory_ToolbarTitle0(this.viewUtils,this.injector(4),this._appEl_4);
     this._ToolbarTitle_4_4 = new import13.Wrapper_ToolbarTitle(this.parentInjector.get(import17.Config),new import18.ElementRef(this._el_4),this.renderer,this.parentInjector.get(import22.Toolbar,(null as any)),this._Navbar_2_4.context);
     this._appEl_4.initComponent(this._ToolbarTitle_4_4.context,([] as any[]),compView_4);
-    this._text_5 = this.renderer.createText((null as any),'Home Page',(null as any));
+    this._text_5 = this.renderer.createText((null as any),'Last Cheking Page',(null as any));
     compView_4.create(this._ToolbarTitle_4_4.context,[([] as any[]).concat([this._text_5])],(null as any));
     this._text_6 = this.renderer.createText((null as any),'\n  ',(null as any));
     compView_2.create(this._Navbar_2_4.context,[
@@ -277,9 +277,8 @@ class _View_HomePage1 extends import1.AppView<any> {
   _el_11:any;
   _text_12:any;
   _text_13:any;
-  _text_14:any;
-  _el_15:any;
-  _text_16:any;
+  _el_14:any;
+  _text_15:any;
   /*private*/ _expr_0:any;
   /*private*/ _expr_1:any;
   /*private*/ _expr_2:any;
@@ -302,19 +301,18 @@ class _View_HomePage1 extends import1.AppView<any> {
     this._text_1 = this.renderer.createText((null as any),'\n       ',(null as any));
     this._el_2 = this.renderer.createElement((null as any),'div',(null as any));
     this._text_3 = this.renderer.createText(this._el_2,'',(null as any));
-    this._text_4 = this.renderer.createText((null as any),'\n       ',(null as any));
+    this._text_4 = this.renderer.createText((null as any),'\n      ',(null as any));
     this._el_5 = this.renderer.createElement((null as any),'div',(null as any));
     this._text_6 = this.renderer.createText(this._el_5,'',(null as any));
-    this._text_7 = this.renderer.createText((null as any),'\n        ',(null as any));
+    this._text_7 = this.renderer.createText((null as any),'\n      ',(null as any));
     this._el_8 = this.renderer.createElement((null as any),'div',(null as any));
     this._text_9 = this.renderer.createText(this._el_8,'',(null as any));
-    this._text_10 = this.renderer.createText((null as any),'\n         ',(null as any));
+    this._text_10 = this.renderer.createText((null as any),'\n      ',(null as any));
     this._el_11 = this.renderer.createElement((null as any),'div',(null as any));
     this._text_12 = this.renderer.createText(this._el_11,'',(null as any));
-    this._text_13 = this.renderer.createText((null as any),'\n         ',(null as any));
-    this._text_14 = this.renderer.createText((null as any),'\n      ',(null as any));
-    this._el_15 = this.renderer.createElement((null as any),'img',(null as any));
-    this._text_16 = this.renderer.createText((null as any),'\n    ',(null as any));
+    this._text_13 = this.renderer.createText((null as any),'\n      ',(null as any));
+    this._el_14 = this.renderer.createElement((null as any),'img',(null as any));
+    this._text_15 = this.renderer.createText((null as any),'\n     \n    ',(null as any));
     this._query_Label_0_0.reset(([] as any[]));
     this._Item_0_4.context.contentLabel = this._query_Label_0_0.first;
     compView_0.create(this._Item_0_4.context,[
@@ -330,9 +328,8 @@ class _View_HomePage1 extends import1.AppView<any> {
         this._text_10,
         this._el_11,
         this._text_13,
-        this._text_14,
-        this._el_15,
-        this._text_16
+        this._el_14,
+        this._text_15
       ]
       ),
       ([] as any[]),
@@ -359,16 +356,15 @@ class _View_HomePage1 extends import1.AppView<any> {
       this._el_11,
       this._text_12,
       this._text_13,
-      this._text_14,
-      this._el_15,
-      this._text_16
+      this._el_14,
+      this._text_15
     ]
     ,([] as any[]),([] as any[]));
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import38.Item) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 16)))) { return this._Item_0_4.context; }
-    if (((token === import38.ItemContent) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 16)))) { return this._ItemContent_0_5.context; }
+    if (((token === import38.Item) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 15)))) { return this._Item_0_4.context; }
+    if (((token === import38.ItemContent) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 15)))) { return this._ItemContent_0_5.context; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
@@ -408,9 +404,9 @@ class _View_HomePage1 extends import1.AppView<any> {
       this.renderer.setText(this._text_12,currVal_3);
       this._expr_3 = currVal_3;
     }
-    const currVal_4:any = this.context.$implicit.image_path;
+    const currVal_4:any = (this.context.$implicit.image_path || this.context.$implicit.user.picture_url);
     if (import4.checkBinding(throwOnChange,this._expr_4,currVal_4)) {
-      this.renderer.setElementProperty(this._el_15,'src',this.viewUtils.sanitizer.sanitize(import39.SecurityContext.URL,currVal_4));
+      this.renderer.setElementProperty(this._el_14,'src',this.viewUtils.sanitizer.sanitize(import39.SecurityContext.URL,currVal_4));
       this._expr_4 = currVal_4;
     }
     this.detectViewChildrenChanges(throwOnChange);

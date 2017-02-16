@@ -6,6 +6,17 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content ng-controller="ExampleController">
 
+  
+      <ion-item>
+        <ion-label>E-mail</ion-label>
+        <ion-input type="text" [(ngModel)]="emailInput" name="E-mail"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Password</ion-label>
+        <ion-input type="password" [(ngModel)]="passwordInput" name="Password"></ion-input>
+      </ion-item>
+      <button ion-button (tap)="login()" block> Connexion</button>
+   
 </ion-content>
